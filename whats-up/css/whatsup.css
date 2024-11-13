@@ -1,0 +1,113 @@
+div.whatsup-widget {
+    border: var(--whatsup-widget-border-width) solid var(--whatsup-widget-border);
+    border-radius: var(--whatsup-widget-radius);
+    padding: var(--whatsup-widget-padding);
+    display: inline-block;
+    background-color: var(--whatsup-widget-background);
+    color: var(--whatsup-widget-text);
+    box-shadow: var(--whatsup-widget-shadow);
+    margin: var(--whatsup-widget-margin);
+    font-family: var(--whatsup-widget-font);
+    font-size: var(--whatsup-widget-font-size);
+    min-width: var(--whatsup-widget-min-width);
+    max-width: var(--whatsup-widget-max-width);
+    width: var(--whatsup-widget-width);
+}
+/* You can use this to customize things for the sidebar display*/
+div.plugin-whats-up .whatsup-widget {
+    /*
+    margin-left: 0px;
+    padding: 0px;
+    max-height: 14em;
+    overflow-y: scroll;
+    */
+}
+div.whatsup-day {
+    display: flex;
+    border: var(--whatsup-day-border-width) solid var(--whatsup-day-border);
+    border-radius: var(--whatsup-day-radius);
+    justify-content: flex-start;
+    background-color: var(--whatsup-day-background);
+}
+div.whatsup-day:not(:first-child) {
+    border-top: var(--whatsup-day-multi-border-width) solid var(--whatsup-day-multi-border);
+    margin-top: var(--whatsup-day-multi-margin-top);
+    padding-top: var(--whatsup-day-multi-padding-top);
+}
+div.whatsup-day-num {
+    font-family: var(--whatsup-day-num-font);
+    font-size: var(--whatsup-day-num-font-size);
+    font-weight: var(--whatsup-day-num-font-weight);
+    text-align: center;
+    padding: var(--whatsup-day-num-padding);
+    background-color: var(--whatsup-day-num-background);
+    color: var(--whatsup-day-num-text);
+    border-radius: var(--whatsup-day-num-radius-top-left) var(--whatsup-day-num-radius-top-right) var(--whatsup-day-num-radius-bottom-right) var(--whatsup-day-num-radius-bottom-left);
+    width: auto;
+    min-width: 60px;
+    max-width: 80px;
+}
+div.whatsup-day-num-today {
+    font-family: var(--whatsup-day-num-today-font);
+    font-weight: var(--whatsup-day-num-today-font-weight);
+    background-color: var(--whatsup-day-num-today-background);
+    color: var(--whatsup-day-num-today-text);
+}
+div.whatsup-day-num-year {
+    font-size: calc(var(--whatsup-day-num-font-size) - 45%);
+}
+span.whatsup-day-num-weekday {
+    font-size: calc(var(--whatsup-day-num-font-size) - 40%);
+}
+div.whatsup-day-all-items {
+    padding: 5px;
+    border-left: var(--whatsup-day-all-items-border);
+    font-size: var(--whatsup-day-all-items-font-size);
+}
+div.whatsup-day-item {
+    display: grid;
+    grid-template-columns: minmax(100px,max-content) auto;
+    /*grid-template-columns: 1fr 2fr;*/
+    gap: 0px;
+}
+div.whatsup-day-item:not(:first-child) {
+    margin-top: var(--whatsup-day-item-multi-margin-top);
+}
+div.whatsup-day-item-time {
+    margin: var(--whatsup-day-item-time-margin);
+}
+div.whatsup-day-item-description {
+    text-align: left;
+}
+div.whatsup-day-item-location {
+    text-align: left;
+    font-family: var(--whatsup-day-item-location-font);
+    font-size: var(--whatsup-day-item-location-font-size);
+    color: var(--whatsup-day-item-location-text);
+}
+div.whatsup-day-item-info {
+    margin: var(--whatsup-day-item-margin);
+}
+/* Some overrides for the sidebar display*/
+div.plugin-content .whatsup-day-item {
+    grid-template-columns: unset;
+    grid-template-rows: auto;
+}
+div.plugin-content .whatsup-widget {
+    /*font-size: calc(var(--whatsup-widget-font-size)) - 20%);*/
+    width: unset;
+    max-width: unset;
+    min-width: unset;
+}
+div.plugin-content .whatsup-day-all-items {
+    font-size: calc(var(--whatsup-day-all-items-font-size) - 25%);
+}
+div.plugin-content .whatsup-day-item-time:first-child {
+    margin-top: -8px;
+}
+div.plugin-content .whatsup-day-num {
+    font-size: 0.8em;
+}
+div.plugin-content span.whatsup-day-num-weekday {
+    font-size: 0.8em;
+}
